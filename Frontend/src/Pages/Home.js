@@ -1,11 +1,11 @@
 
 import React from 'react';
-import { TestComponent } from '../Components';
+import { TestComponent, LoginForm } from '../Components';
  
 const Home = () => {
     return (
         <div>
-            <TestComponent />
+            <LoginForm />
         </div>
     );
 }
