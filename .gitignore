@@ -1,4 +1,6 @@
-
+.DS_Store
+.eslintcache
 node_modules
+.gitignore.swp
 .vscode
 *.swp
