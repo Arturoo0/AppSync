@@ -6,4 +6,5 @@ app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 })
 
-app.use('/base', require('./base'));
+const base = require('./routes/base.js');
+app.use('/base', base);
