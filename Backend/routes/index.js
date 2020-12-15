@@ -4,4 +4,6 @@ const router = express.Router();
 
 const base = require('./base.js');
 
-router.use('/');
+router.use('/base', base);
+
+module.exports = router;
