@@ -4,15 +4,18 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import { Home } from './Pages';
+import { LoginPage, SignupPage } from './Pages';
 
 function App() {
   return (
     <Router>
       <div>
         <Switch>
-          <Route path="/login">
-            <Home />
+          <Route path='/login'>
+            <LoginPage />
+          </Route>
+          <Route path='/signup'>
+            <SignupPage />
           </Route>
         </Switch>
       </div>

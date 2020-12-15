@@ -1,9 +1,8 @@
-
 import React from 'react';
-import { TestComponent, LoginForm } from '../Components';
+import { SignupForm } from '../Components';
 import Grid from '@material-ui/core/Grid';
 
-const Home = () => {
+const SignupPage = () => {
     return (
         <Grid
             container
@@ -12,9 +11,9 @@ const Home = () => {
             justify="center"
             style={{ minHeight: "100vh" }}
         >
-            <Grid item xs={12}><LoginForm/></Grid>
+            <Grid item xs={12}><SignupForm/></Grid>
         </Grid>
     );
 }
 
-export default Home;
+export default SignupPage;
