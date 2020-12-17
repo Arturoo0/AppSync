@@ -12,3 +12,5 @@ router.post('/signup', (req, res) => {
     console.log(req);
     res.send(resGen.generate200({authRouteType : 'signup'}));
 });
+
+module.exports = router;
