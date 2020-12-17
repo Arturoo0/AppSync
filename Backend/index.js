@@ -7,4 +7,6 @@ app.listen(port, () => {
 })
 
 const base = require('./routes/base.js');
+const auth = require('./routes/auth.js');
 app.use('/base', base);
+app.use('/auth', base);
