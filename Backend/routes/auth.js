@@ -2,14 +2,18 @@
 const express = require('express');
 const router = express.Router();
 const resGen = require('../Utils/responseGenerator.js'); 
+const bodyParser = require('body-parser');
 
-router.post('/login', (req, res) => {
-    console.log(req);
+const jsonParser = bodyParser.json()
+const urlencodedParser = bodyParser.urlencoded({ extended: false })
+
+router.post('/login', urlencodedParser, (req, res) => {
+    console.log(req.body);
     res.send(resGen.generate200({authRouteType : 'login'}));
 });
 
-router.post('/signup', (req, res) => {
-    console.log(req);
+router.post('/signup', urlencodedParser, (req, res) => {
+    console.log(req.body);
     res.send(resGen.generate200({authRouteType : 'signup'}));
 });
 
