@@ -13,6 +13,7 @@ import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import { baseRequest } from '../../utils';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -32,6 +33,11 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(3, 0, 2),
   },
 }));
+
+const postUserInfo = async (userInfo) => {
+  console.log('called');
+  baseRequest.postUserInfo({userInfo});
+}
 
 export default function SignUp() {
   const classes = useStyles();
@@ -93,11 +99,11 @@ export default function SignUp() {
             </Grid>
           </Grid>
           <Button
-            type="submit"
             fullWidth
             variant="contained"
             color="primary"
             className={classes.submit}
+            onClick={() => postUserInfo({username : 'user', password : 'pass'})}
           >
             Sign Up
           </Button>
