@@ -6,7 +6,7 @@ export const postUserInfo = (userInfo) => {
         userInfo
     )
     .then((response) => {
-        console.log(response);
+        return;
     })
 }
 

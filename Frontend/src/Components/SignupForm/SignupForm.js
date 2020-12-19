@@ -35,7 +35,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const postUserInfo = async (userInfo) => {
-  console.log(userInfo);
   await baseRequest.postUserInfo({userInfo});
 }
 
