@@ -35,8 +35,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const postUserInfo = async (userInfo) => {
-  console.log('called');
-  baseRequest.postUserInfo({userInfo});
+  console.log(userInfo);
+  await baseRequest.postUserInfo({userInfo});
 }
 
 export default function SignUp() {

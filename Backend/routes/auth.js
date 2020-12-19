@@ -7,12 +7,12 @@ const bodyParser = require('body-parser');
 const jsonParser = bodyParser.json()
 const urlencodedParser = bodyParser.urlencoded({ extended: false })
 
-router.post('/login', urlencodedParser, (req, res) => {
+router.post('/login', jsonParser, (req, res) => {
     console.log(req.body);
     res.send(resGen.generate200({authRouteType : 'login'}));
 });
 
-router.post('/signup', urlencodedParser, (req, res) => {
+router.post('/signup', jsonParser, (req, res) => {
     console.log(req.body);
     res.send(resGen.generate200({authRouteType : 'signup'}));
 });
